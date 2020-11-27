@@ -4,9 +4,24 @@
              x:Class="UkolMobApka.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="#04CA2B" Padding="24" CornerRadius="0">
+            <Label Text="Vítejte v Loginu!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
+        <Label Text="Vyberte oslovení" Margin="10,10,10,10"></Label>
+        <Picker x:Name="osloveni" Title="Oslovení" Margin="20,0,20,20">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Pan</x:String>
+                    <x:String>Paní</x:String>
+                    <x:String>Prof.</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label Text="Zadejte jméno" Margin="10,10,10,10"></Label>
+        <Entry x:Name="name" Placeholder="Zadej jméno" Margin="20,0,10,10"></Entry>
+        <Label Text="Zadejte heslo" Margin="10,10,10,10"></Label>
+        <Entry x:Name="password" Placeholder="Zadej heslo" IsPassword="True" Margin="20,0,10,10"></Entry>
+        <Button Text="Přihlásit" Margin="50,10,50,10" x:Name="login" Clicked="login_Clicked" BackgroundColor="LightCoral"></Button>
     </StackLayout>
 
 </ContentPage>
