@@ -20,7 +20,7 @@ namespace UkolMobApka
                     myPass = "Chyba! Musí obsahovat alespoň 1 písmeno.";
                 else if (!value.Any(char.IsDigit))
                     myPass = "Chyba! Musí obsahovat alespoň 1 číslo.";
-                else if (value.All(char.IsLower))
+                else if (value.ToLower() == value)
                     myPass = "Chyba! Musí obsahovat alespoň 1 velké písmeno.";
                 else
                     myPass = value; 
