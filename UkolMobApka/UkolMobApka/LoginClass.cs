@@ -16,6 +16,8 @@ namespace UkolMobApka
             set {
                 if (value.ToCharArray().Length < 8)
                     myPass = "Chyba! Musí obsahovat alespoň 8 znaků.";
+                else if (value.All(char.IsDigit))
+                    myPass = "Chyba! Musí obsahovat alespoň 1 písmeno.";
                 else if (!value.Any(char.IsDigit))
                     myPass = "Chyba! Musí obsahovat alespoň 1 číslo.";
                 else if (value.All(char.IsLower))
