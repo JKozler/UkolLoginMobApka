@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace UkolMobApka
 {
@@ -22,6 +23,8 @@ namespace UkolMobApka
                     myPass = "Chyba! Musí obsahovat alespoň 1 číslo.";
                 else if (value.ToLower() == value)
                     myPass = "Chyba! Musí obsahovat alespoň 1 velké písmeno.";
+                else if (Regex.IsMatch(value, "^[a-zA-Z0-9 ]*$"))
+                    myPass = "Chyba! Musí obsahovat alespoň 1 speciální znak.";
                 else
                     myPass = value; 
             }
